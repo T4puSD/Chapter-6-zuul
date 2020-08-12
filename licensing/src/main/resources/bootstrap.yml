@@ -13,4 +13,5 @@ spring:
     # cloud:
     #     config:
     #         # uri: http://localhost:8888
-    #         enabled: true
+    # this is for without eureka server we need to set the config serve url
+    # manually

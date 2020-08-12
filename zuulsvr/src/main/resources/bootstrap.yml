@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: zuulservice
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,36 @@
+# setting server port
+server:
+  port: 5555
+
+spring:
+  profiles:
+    active: default
+  cloud:
+    config:
+      enabled: true
+
+# setting up this application as eureka client
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+# now enabling config server in zuul
+# zuul:
+#   # ignoring automated mappings
+#   # by default automated routings will be enabled
+#   ignored-services: "*"
+#   # setting prefix to all url so differentiate content url and api url
+#   prefix: /api
+#   # manually mapping with short url term
+#   routes:
+#     organizationservice: /organization/**
+#     licensingservice: /licenseing/**
+#     # manually mapping static service not registered with eureka server
+#     staticlicense:
+#       path: /staticlicense/**
+#       url: http://localhost:3000/
