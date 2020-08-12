@@ -1,0 +1,28 @@
+server:
+    port: 8888
+# encrypt:
+#     key: mykey
+    # $ set ENCRYPT_KEY=mykey (in windows terminal where u run this app)
+    # $ export ENCRYPT_KEY=mykey (in linux or osx terminal)
+
+#FOR GITHUB AS BACKEND
+# spring:
+#     cloud:
+#         config:
+#             server:
+#                 git:
+#                     uri: https://github.com/tapusd/SpringCloudConfigRepo
+#                     search-paths: licensingservice, organizationservice
+                    # if the repo is private we need to provide credentials for the github account
+                    # username: github-username
+                    # password: github-password
+
+# FOR LCOAL FILE SYTEM AS BACKEND
+spring:
+    profiles:
+        active: native
+    cloud:
+        config:
+            server:
+                native:
+                    search-locations: file:///C:/Users/TapuSD/Documents/JavaProjects/MavenProjects/Chapter-6-Service-Gateway/localConfig

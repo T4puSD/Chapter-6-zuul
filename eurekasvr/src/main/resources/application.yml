@@ -1,0 +1,11 @@
+server:
+    port: 8761
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+    # server:
+    #     wait-time-in-ms-when-sync-empty: 5
+    # see in book(page- 106) why this is commented while running
+    # in the development local machine
+

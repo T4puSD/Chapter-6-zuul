@@ -1,0 +1,8 @@
+tracer.property: "I AM THE DEVELOPER"
+example.property: "This is a example custom property"
+spring.jpa.hibernate.ddl-auto: "update"
+spring.jpa.database: "mysql"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.MySQL5Dialect"
+spring.datasource.url: "jdbc:mysql://localhost:3306/licensingservice"
+spring.datasource.username: "root"
+spring.datasource.password: "{cipher}46f07b80e199ede50c80466b1c03ee863d883015dd7a3aa05b5f03cb8741f00d"

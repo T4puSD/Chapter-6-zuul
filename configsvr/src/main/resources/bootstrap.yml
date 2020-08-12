@@ -1,0 +1,14 @@
+encrypt:
+  key: mykey
+  # this is just for development purpose in the production use environment variable to 
+  # set this encryption key
+spring:
+  application:
+    name: configserver
+    # giving a name to the project
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        # diabled decryption in cloud config server
+        # and decryption will happen in client side with the ENCRYPT_KEY environment variable

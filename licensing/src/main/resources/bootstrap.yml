@@ -1,0 +1,16 @@
+encrypt:
+    key: mykey
+    # don't use this encryption key in production use environment vairable to set this key
+    
+spring:
+    application:
+        name: licensingservice
+    profiles:
+        active: dev
+    cloud:
+        config:
+            enabled: true
+    # cloud:
+    #     config:
+    #         # uri: http://localhost:8888
+    #         enabled: true
