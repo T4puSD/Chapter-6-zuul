@@ -1,0 +1,6 @@
+encrypt:
+  key: mykey
+
+spring:
+    application:
+        name: specialroutesservice
