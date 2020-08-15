@@ -12,13 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "v1/route/")
+@RequestMapping(value = "/v1/route/")
 public class SpecialRoutesServiceController {
 
     @Autowired
     AbTestingRouteService routeService;
 
-    @GetMapping(value = "abtesting/{serviceName}")
+    @GetMapping(value = "/abtesting")
+    public Iterable<AbTestingRoute> getAllRoutes(){
+        return routeService.getAll();
+    }
+
+    @GetMapping(value = "/abtesting/{serviceName}")
     public AbTestingRoute abtestings(@PathVariable("serviceName") String serviceName){
         return routeService.getRoute(serviceName);
     }

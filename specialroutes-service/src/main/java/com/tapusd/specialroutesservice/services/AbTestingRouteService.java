@@ -23,6 +23,10 @@ public class AbTestingRouteService {
         return route;
     }
 
+    public Iterable<AbTestingRoute> getAll(){
+        return abTestingRouteRepository.findAll();
+    }
+
     public void saveAbTestingRoute(AbTestingRoute route){
         abTestingRouteRepository.save(route);
     }

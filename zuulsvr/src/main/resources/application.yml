@@ -2,6 +2,12 @@
 server:
   port: 5555
 
+logging:
+    level:
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.tapusd: DEBUG
+
 spring:
   profiles:
     active: default
