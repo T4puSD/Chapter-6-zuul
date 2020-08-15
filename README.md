@@ -1,2 +1,2 @@
 # Chapter-4-On-Service-Discovery
-Spring boot Microservice in action
+Spring boot Microservice in action chapter 6 implementation
