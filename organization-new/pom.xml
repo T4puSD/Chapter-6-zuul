@@ -11,7 +11,7 @@
 	<groupId>com.tapusd</groupId>
 	<artifactId>organization-new</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>organization-service</name>
+	<name>orgservice-new</name>
 	<description>Demo project for Spring Boot eureka client</description>
 
 	<properties>

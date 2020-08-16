@@ -59,12 +59,13 @@ public class FilterUtils {
     }
     
 
-    public String getServiceId(){
-        RequestContext ctx = RequestContext.getCurrentContext();
+    // public String getServiceId(){
+    //     RequestContext ctx = RequestContext.getCurrentContext();
 
-        //if we use static non eureka route we won't get service id
-        if(ctx.get("serviceId") !=null) return "";
-        return ctx.get("serviceId").toString();
-    }
+    //     //if we use static non eureka route we won't get service id
+    //     if(ctx.get("serviceId") !=null) return "";
+    //     return ctx.get("serviceId").toString();
+    // }
+    // This doesn't work don't give the serviceid use the code chunk directly on zuul filter
     
 }

@@ -26,29 +26,28 @@ public class LicenseServiceController {
     // @Autowired
     // private ServiceConfig serviceConfig;
 
-    @GetMapping(value = "/{licenseId}/{clientType}")
-    public License getLicenseWithClient(
+    @GetMapping(value = "/{licenseId}")
+    public License getLicense(
         @PathVariable("organizationId") Long organizationId,
-        @PathVariable("licenseId") Long licenseId,
-        @PathVariable("clientType") String clientType
+        @PathVariable("licenseId") Long licenseId
     ){
         // return "Org: " + organizationId + " license: " + licenseId + " cilent type: " + clientType;
-        License license = licenseService.getLicense(organizationId, licenseId,clientType);
+        License license = licenseService.getLicenseWithOrg(organizationId, licenseId);
         if(license == null) return null;
         return license;
     }
     
     @GetMapping("/")
-    public List<License> getLicense(@PathVariable("organizationId") Long organizationId){
+    public List<License> getLicenses(@PathVariable("organizationId") Long organizationId){
         return licenseService.getLicenseByOrg(organizationId);
     }
 
-    @GetMapping(value = "/{licenseId}")
-    public License getLicenses(@PathVariable("organizationId") Long organizationId,
-                                @PathVariable("licenseId") Long licenseId)
-    {
-        return licenseService.getLicense(organizationId, licenseId);
-    }
+    // @GetMapping(value = "/{licenseId}")
+    // public License getLicenses(@PathVariable("organizationId") Long organizationId,
+    //                             @PathVariable("licenseId") Long licenseId)
+    // {
+    //     return licenseService.getLicense(organizationId, licenseId);
+    // }
 
     @PutMapping("/{licenseId}")
     public String updateLicense(@PathVariable("licenseId") Long licenseId){
